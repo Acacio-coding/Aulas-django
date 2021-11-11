@@ -12,9 +12,21 @@ O objetivo é desenvolver um site utilizando Django (framework para desenvolvime
 Utilize os códigos abaixo na linha de comando adaptando para seu sistema:
 
 ```
-git clone https://github.com/Acacio-coding/ADOSAREC-frontend.git
+git clone https://github.com/Acacio-coding/Aulas-django.git
+```
+
+```
 cd django
+```
+
+```
 python -m venv myvenv
+```
+
+```
 python -m pip install --upgrade pip
+```
+
+```
 pip install -r requirements.txt
 ```
