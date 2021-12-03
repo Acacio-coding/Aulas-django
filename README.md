@@ -16,11 +16,11 @@ git clone https://github.com/Acacio-coding/Aulas-django.git
 ```
 
 ```
-cd django
+cd Aulas-django
 ```
 
 ```
-python -m venv myvenv
+python -m venv <nome da sua venv>
 ```
 
 ```
