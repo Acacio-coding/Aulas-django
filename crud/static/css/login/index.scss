@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(210, 10%, 30%),
+    hsl(210, 10%, 15%)
+  );
+}

@@ -1,0 +1,14 @@
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#454d54), to(#22262a));
+  background-image: linear-gradient(to bottom right, #454d54, #22262a);
+}
+/*# sourceMappingURL=index.css.map */
