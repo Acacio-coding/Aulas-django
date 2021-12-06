@@ -6,6 +6,7 @@ O objetivo é desenvolver um site utilizando Django (framework para desenvolvime
 
 - Python 3 ou superior
 - Django 2.2.4
+- Django-widget-tweaks 1.4.9 ou superior
 
 ## Para utilizar o projeto
 
