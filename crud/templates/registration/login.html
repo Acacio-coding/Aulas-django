@@ -48,7 +48,43 @@
     <div class="container-fluid h-100">
       <div class="row h-100">
         <div class="col p-0 root">
-          <div class="login-container"></div>
+          <div class="col-3 p-2">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title text-center mb-5">Login</h2>
+
+                <form method="POST" class="teste">
+                  {% csrf_token %}
+                  <input type="hidden" name="text" value="{{ next }}" />
+
+                  <label>Usuário</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="username"
+                    placeholder="Usuário"
+                    style="color: #000; font-size: 17px"
+                  />
+                  <br />
+
+                  <label>Senha</label>
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="Senha"
+                    style="color: #000; font-size: 17px"
+                  />
+                  <br />
+                  <br />
+
+                  <button type="submit" class="btn py-3 btn-dark btn-block">
+                    Entrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

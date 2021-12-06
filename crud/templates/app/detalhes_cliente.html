@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %} 
+{% block content %}
+  <ul>
+    <li>{{ client.name }}</li>
+    <li>{{ client.identifier }}</li>
+    <li>{{ client.account }}</li>
+    <li>{{ client.creation_date }}</li>
+  </ul>
+
+  <ul>
+    {% for purchase in purchases %}
+      <li>
+        {{ purchase.description }}
+      </li>
+
+      <li>
+        {{ purchase.value }}
+      </li>
+
+      <li>
+        {{ purchase.date }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

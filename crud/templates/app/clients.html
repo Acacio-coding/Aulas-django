@@ -1,1 +1,53 @@
-{% extends 'app/base.html'%}
+{% extends 'app/base.html' %} {% block content %} {% block styles %}
+<link rel="stylesheet" href="../../static/css/clients/index.css" />
+{% endblock %}
+
+<div class="col-12 p-0 mb-2 d-flex justify-content-between align-items-center">
+  <h2>Clientes</h1>
+
+  <div>
+    <a class="rounded" id="add-client" href="{% url 'clients_new' %}">
+      <i class="fas fa-plus-circle"></i>
+      Novo cliente
+    </a> 
+  </div>
+</div>
+
+<table
+  class="
+    table table-light table-striped table-hover table-responsive-sm
+    rounded text-center
+  "
+>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Identificador</th>
+      <th scope="col">Conta</th>
+      <th scope="col">Data de criação</th>
+      <th scope="col">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for client in clients %}
+    <tr>
+      <td>{{ client.name }}</td>
+      <td>{{ client.identifier }}</td>
+      <td>{{ client.account }}</td>
+      <td>{{ client.creation_date }}</td>
+      <td>
+        <div class="icons-wrapper">
+          <a href="{% url 'clients_edit' pk=client.pk %}">
+            <i class="fas fa-pen" id="edit"></i>
+          </a>
+          
+          <a href="{% url 'clients_remove' pk=client.pk %}">
+            <i class="fas fa-trash-alt"></i>
+          </a>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

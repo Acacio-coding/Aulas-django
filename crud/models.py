@@ -7,6 +7,23 @@ class Client(models.Model):
   identifier = models.CharField(max_length=100)
   account = models.DecimalField(max_digits=6, decimal_places=2)
   creation_date = models.DateTimeField(default=timezone.now)
+
+  def registerPurchase(self, value):
+    self.account += value
+    self.save()
+
+  def updatePurchase(self, oldValue):
+    self.account -= oldValue
+    self.save()
+  
+  def registerPayment(self, value):
+    self.account -= value
+    self.save()
+
+  def updatePayment(self, oldValue):
+    self.account += oldValue
+    self.save()
+
   
 class Purchase(models.Model):
   description = models.TextField()
@@ -18,6 +35,9 @@ class Purchase(models.Model):
     self.date = timezone.now()
     self.save()
 
+  def getValue(self):
+    return self.value
+
 class Payment(models.Model):
   method = models.CharField(max_length=10)
   date = models.DateField()
@@ -27,4 +47,7 @@ class Payment(models.Model):
   def pay(self):
     self.date = timezone.now()
     self.save()
+
+  def getValue(self):
+    return self.value
   
