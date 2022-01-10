@@ -5,8 +5,6 @@ O objetivo é desenvolver um site utilizando Django (framework para desenvolvime
 ## Requerimentos
 
 - Python 3 ou superior
-- Django 2.2.4
-- Django-widget-tweaks 1.4.9 ou superior
 
 ## Para utilizar o projeto
 
@@ -17,17 +15,25 @@ git clone https://github.com/Acacio-coding/Aulas-django.git
 ```
 
 ```
-cd Aulas-django
+cd <caminho da pasta após extrair>
 ```
 
 ```
-python -m venv <nome da sua venv>
+python3 -m venv <nome da sua venv>
 ```
 
 ```
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 ```
 
 ```
 pip install -r requirements.txt
+```
+
+Obs.: Não esqueça de configurar o settings.py gerado dentro de "<b>rede_soliedariedade</b>" para atender aos seus requisitos.
+
+## Para iniciar o servidor local
+
+```
+python3 manage.py runserver
 ```
